@@ -16,8 +16,4 @@ function teste() {
   console.log("teste");
 }
 
-function casa() {
-  console.log();
-}
-
 export default Home;
