@@ -1,0 +1,5 @@
+POSTGRES_HOST=seu_host
+POSTGRES_PORT=sua_port
+POSTGRES_DATABASE=seu_db
+POSTGRES_USER=seu_user_db
+POSTGRES_PASSWORD=seu_passwd
