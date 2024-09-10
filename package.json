@@ -4,9 +4,12 @@
   "description": "projeto teste",
   "main": "index.js",
   "scripts": {
+    "services:up": "sudo docker compose -f infra/compose.yaml up -d",
+    "services:stop": "sudo docker compose -f infra/compose.yaml stop",
+    "services:down": "sudo docker compose -f infra/compose.yaml down",
     "test": "jest",
+    "dev": "npm run services:up && next dev",
     "test:watch": "jest --watch",
-    "dev": "next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write ."
   },
