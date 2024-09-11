@@ -11,10 +11,10 @@ async function status(req, res) {
   const dbMaxConnections = maxConnections.rows[0].max_connections;
 
   const maxActivity = await database.query(
-    "select count(*) from pg_stat_activity where datname = 'db_local';",
+    "select count(*)::int from pg_stat_activity where datname = 'db_local';",
   );
 
-  const dbMaxConnectionsActivity = maxActivity.rows.length;
+  const dbMaxConnectionsActivity = maxActivity.rows[0].count;
 
   res.status(200).json({
     update_at: updateAt,
